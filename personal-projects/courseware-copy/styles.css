@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation bar */
+
+nav, .nav-left-side {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 5px 15px 5px 15px;
+}
+
+/* Sidebar */
+
+.sidebar-left {
+    visibility: hidden;
+}
+
+/* Main Courseware */
+
+.courseware-main {
+    display: flex;
+}
