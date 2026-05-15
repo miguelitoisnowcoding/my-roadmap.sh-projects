@@ -23,26 +23,22 @@
         <label for="">Scissors</label>
         <input type="radio" name="choices" id="scissorsChoice">
       </div>
-      <div id="choiceImages"></div>
-      <div id="choiceResult"></div>
-      <button onclick="pressPlay">Play</button>
+      <div id="playerOneChoiceImages"></div>
+      <div id="playerOneChoiceResult"></div>
     </section>
-
+    
     <!--AUTOMATED PLAYER 2-->
-    <section class="player-container">
-      <h2 id="player-container__title">Player 1</h2>
-      <div class="player-container__choices">
-        <label for="">Rock</label>
-        <input type="radio" name="choices" id="rockChoice">
-        <label for="">Paper</label>
-        <input type="radio" name="choices" id="paperChoice">
-        <label for="">Scissors</label>
-        <input type="radio" name="choices" id="scissorsChoice">
-      </div>
-      <button class="player-container__button" id="playBtn">Play</button>
+    <section class="player-container" id="player-2">
+      <h2 id="player-container__title">Player 2</h2>
+      <div id="playerTwoChoiceImages"></div>
+      <div id="playerTwoChoiceResult"></div>
     </section>
   </main>
 
+  <footer>
+    <p id="gameResult"></p>
+    <button onclick="pressPlay()">Play</button>
+  </footer>
 
   <script src="scripts/index.js"></script>
 </body>
