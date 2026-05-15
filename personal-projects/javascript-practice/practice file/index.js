@@ -1,30 +1,11 @@
-// let arr = [12, 8, 29, 10, 83, 2, 59, 42, 69, 100];
+const output = document.getElementById("output");
+const submitBtn = document.getElementById("submitBtn");
 
-// for (let i = 0; i < arr.length; i++) {
-//   for (let j = 0; j < arr.length; j++) {
-//     if (arr[j] > arr[j + 1]) {
-//       let temp = arr[j];
-//       arr[j] = arr[j + 1];
-//       arr[j + 1] = temp;
-//     }
-//   }
-// }
+submitBtn.onclick = function() {
+  const fullName = document.getElementById("fullName").value;
 
-// for (let i = 0; i < arr.length; i++) {
-//   console.log(arr[i]);
-// }
- 
+  let firstName = fullName.slice(0, fullName.indexOf(" "));
+  let lastName = fullName.slice(fullName.indexOf(" "));
 
-let arr = ["Miguel", 17, "Matthew", 18, "Lexa", 17, "MJ", 18];
-let num = [];
-
-for (let i = 0; i < arr.length; i++) {
-  if (isNaN(arr[i])) {
-    console.log(arr[i]);
-  } else {
-    console.log(arr[i]);
-    arr[i] += num;
-  }
+  output.textContent = `Your first name is ${firstName} and your last name is ${lastName}`;
 }
-
-console.log(num);

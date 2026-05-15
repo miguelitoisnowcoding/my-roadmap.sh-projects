@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock/Paper/Scissors Game</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <header>
+    <h1>Rock/Paper/Scissors Game</h1>
+  </header>
+  <main>
+
+    <!--Main Player 1-->
+    <section class="player-container">
+      <h2 id="player-container__title">Player 1</h2>
+      <div class="player-container__choices">
+        <label for="">Rock</label>
+        <input type="radio" name="choices" id="rockChoice">
+        <label for="">Paper</label>
+        <input type="radio" name="choices" id="paperChoice">
+        <label for="">Scissors</label>
+        <input type="radio" name="choices" id="scissorsChoice">
+      </div>
+      <div id="choiceImages"></div>
+      <div id="choiceResult"></div>
+      <button onclick="pressPlay">Play</button>
+    </section>
+
+    <!--AUTOMATED PLAYER 2-->
+    <section class="player-container">
+      <h2 id="player-container__title">Player 1</h2>
+      <div class="player-container__choices">
+        <label for="">Rock</label>
+        <input type="radio" name="choices" id="rockChoice">
+        <label for="">Paper</label>
+        <input type="radio" name="choices" id="paperChoice">
+        <label for="">Scissors</label>
+        <input type="radio" name="choices" id="scissorsChoice">
+      </div>
+      <button class="player-container__button" id="playBtn">Play</button>
+    </section>
+  </main>
+
+
+  <script src="scripts/index.js"></script>
+</body>
+</html>
