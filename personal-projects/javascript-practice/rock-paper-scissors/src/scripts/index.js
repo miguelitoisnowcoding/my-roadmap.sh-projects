@@ -13,17 +13,17 @@ function pressPlay() {
 
   if (rockChoice.checked) {
     playerOneChoiceResult.textContent = `You Picked Rock!`;
-    playerOneChoiceImages.innerHTML = `<img src="assets/rock.png" alt="rock" width="200">`;
+    playerOneChoiceImages.innerHTML = `<img src="../assets/rock.png" alt="rock" width="200">`;
 
     playerOneChoice = 1;
   } else if (paperChoice.checked) {
     playerOneChoiceResult.textContent = `You Picked Paper!`;
-    playerOneChoiceImages.innerHTML = `<img src="assets/paper.png" alt="paper" width="200">`;
+    playerOneChoiceImages.innerHTML = `<img src="../assets/paper.png" alt="paper" width="200">`;
 
     playerOneChoice = 2;
   } else if (scissorsChoice.checked) {
     playerOneChoiceResult.textContent = `You Picked Scissors!`;
-    playerOneChoiceImages.innerHTML = `<img src="assets/scissors.png" alt="scissors" width="200">`;
+    playerOneChoiceImages.innerHTML = `<img src="../assets/scissors.png" alt="scissors" width="200">`;
 
     playerOneChoice = 3;
   }
@@ -34,17 +34,17 @@ function pressPlay() {
   switch(playerTwoChoice) {
     case 1:
       playerTwoChoiceResult.textContent = `Player 2 Picked Rock`;
-      playerTwoChoiceImages.innerHTML = `<img src="assets/rock.png" alt="rock" width="200">`;
+      playerTwoChoiceImages.innerHTML = `<img src="../assets/rock.png" alt="rock" width="200">`;
       break;
 
     case 2:
       playerTwoChoiceResult.textContent = `Player 2 Picked Paper`;
-      playerTwoChoiceImages.innerHTML = `<img src="assets/paper.png" alt="paper" width="200">`;
+      playerTwoChoiceImages.innerHTML = `<img src="../assets/paper.png" alt="paper" width="200">`;
       break; 
 
     case 3:
       playerTwoChoiceResult.textContent = `Player 2 Picked Scissors`;
-      playerTwoChoiceImages.innerHTML = `<img src="assets/scissors.png" alt="scissors" width="200">`;
+      playerTwoChoiceImages.innerHTML = `<img src="../assets/scissors.png" alt="scissors" width="200">`;
       break;
 
     default:
