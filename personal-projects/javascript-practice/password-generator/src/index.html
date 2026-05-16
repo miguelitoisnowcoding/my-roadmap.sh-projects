@@ -12,9 +12,8 @@
   <main>
     <section class="password-container">
       <div class="password-container__length">
-        <label for="">Password Length: </label>
-        <input type="range" min="5" max="50" value="5" name="" id="passwordLengthRange">
-        <p id="passwordLengthRange__value"></p>
+        <label for="passwordValue">Password Length: </label>
+        <input type="number" min="1" max="100" name="passwordValue" id="passwordValue">
       </div>
       <div class="password-container__radio">
         <p>What do you want to include?</p>
@@ -31,8 +30,7 @@
   </main>
   <footer>
     <div class="password-container__buttons">
-        <button type="submit">Reset</button>
-        <button onclick="generatePassword()">Generate</button>
+        <button id="generateBtn">Generate</button>
     </div>
     <p>Password: <span id="passwordResult"></span></p>
   </footer>
