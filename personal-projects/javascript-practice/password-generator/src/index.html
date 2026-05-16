@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Password Generator</title>
-  <link rel="stylesheet" href="styles/main.css">
+  <title>Document</title>
 </head>
 <body>
   <header>
@@ -18,25 +17,25 @@
         <p id="passwordLengthRange__value"></p>
       </div>
       <div class="password-container__radio">
-        <label for="">What do you want to include?</label>
-        <label for="">Lowercase</label>
-        <input type="checkbox" name="" id="includeLowerCase">
-        <label for="">Uppercase</label>
-        <input type="checkbox" name="" id="includeUpperCase">
-        <label for="">Numbers</label>
-        <input type="checkbox" name="" id="includeNumbers">
-        <label for="">Special Characters</label>
-        <input type="checkbox" name="" id="includeSpecialChars">
+        <p>What do you want to include?</p>
+        <label for="includeLowerCase">Lowercase</label>
+        <input type="checkbox" name="choices" id="includeLowerCase">
+        <label for="includeUpperCase">Uppercase</label>
+        <input type="checkbox" name="choices" id="includeUpperCase">
+        <label for="includeNumbers">Numbers</label>
+        <input type="checkbox" name="choices" id="includeNumbers">
+        <label for="includeSpecialChars">Special Characters</label>
+        <input type="checkbox" name="choices" id="includeSpecialChars">
       </div>
     </section>
   </main>
   <footer>
     <div class="password-container__buttons">
         <button type="submit">Reset</button>
-        <button id="generateBtn">Generate</button>
+        <button onclick="generatePassword()">Generate</button>
     </div>
     <p>Password: <span id="passwordResult"></span></p>
   </footer>
-  <script src="scripts/index.js"></script>
+  <script src="script/index.js"></script>
 </body>
 </html>
