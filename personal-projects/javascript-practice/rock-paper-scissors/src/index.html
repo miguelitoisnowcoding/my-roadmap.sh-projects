@@ -11,17 +11,16 @@
     <h1>Rock/Paper/Scissors Game</h1>
   </header>
   <main>
-
     <!--Main Player 1-->
     <section class="player-container">
-      <h2 id="player-container__title">Player 1</h2>
+      <h2 class="player-container__title">Player 1</h2>
       <div class="player-container__choices">
-        <label for="">Rock</label>
-        <input type="radio" name="choices" id="rockChoice">
-        <label for="">Paper</label>
-        <input type="radio" name="choices" id="paperChoice">
-        <label for="">Scissors</label>
-        <input type="radio" name="choices" id="scissorsChoice">
+        <label class="player-container__choices__label" for="">Rock</label>
+        <input type="radio" name="choices" class="player-container__choices__radio" id="rockChoice">
+        <label class="player-container__choices__label" for="">Paper</label>
+        <input type="radio" name="choices" class="player-container__choices__radio" id="paperChoice">
+        <label class="player-container__choices__label" for="">Scissors</label>
+        <input type="radio" name="choices" class="player-container__choices__radio" id="scissorsChoice">
       </div>
       <div id="playerOneChoiceImages"></div>
       <div id="playerOneChoiceResult"></div>
@@ -29,7 +28,7 @@
     
     <!--AUTOMATED PLAYER 2-->
     <section class="player-container" id="player-2">
-      <h2 id="player-container__title">Player 2</h2>
+      <h2 class="player-container__title">Player 2</h2>
       <div id="playerTwoChoiceImages"></div>
       <div id="playerTwoChoiceResult"></div>
     </section>

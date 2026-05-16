@@ -12,7 +12,6 @@
 
 header {
   text-align: center;
-  
   margin: 20px;
 }
 
@@ -25,17 +24,59 @@ main {
 
 /* Player Container */
 
-#playerOneChoiceImages, #playerTwoChoiceImages {
-  max-width: 200px;
+.player-container {
+  display: inherit;
+  flex-direction: column;
+  align-items: center;
+
+  border: 1px solid black;
+  padding: 15px;
+
+  width: 20em;
+  height: 22em;
+}
+
+.player-container__title {
+  margin: 10px;
+}
+
+.player-container__choices__label {
+  padding-left: 5px;
+}
+
+#playerOneChoiceResult, #playerTwoChoiceResult {
+  padding-top: 15px;
+}
+
+#playerTwoChoiceImages {
+  padding-top: 1em;
 }
 
 /* footer */
 
 footer {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer p {
+  size: 50px;
+  font-weight: bold;
+
+  margin: 20px;
 }
 
 button {
-  padding: 5px 15px;
+  padding: 10px 25px;
+  background-color: lightblue;
+  border: 1px solid black;
 } 
+
+button:hover {
+  background-color: rgb(176, 222, 238);
+}
+
+button:active {
+  background-color: rgb(136, 172, 184);
+}
