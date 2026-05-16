@@ -4,12 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-  <header>
-    <h1>Password Generator</h1>
-  </header>
   <main>
+
+    <section class="password-header">
+      <h1>Password Generator</h1>
+    </section>
+
     <section class="password-container">
       <div class="password-container__length">
         <label for="passwordValue">Password Length: </label>
@@ -27,13 +30,15 @@
         <input type="checkbox" name="choices" id="includeSpecialChars">
       </div>
     </section>
-  </main>
-  <footer>
-    <div class="password-container__buttons">
-        <button id="generateBtn">Generate</button>
+
+    <section class="password-footer">
+    <div class="password-footer_buttons">
+      <button id="generateBtn">Generate</button>
     </div>
     <p>Password: <span id="passwordResult"></span></p>
-  </footer>
+    </section>
+
+  </main>
   <script src="script/index.js"></script>
 </body>
 </html>
