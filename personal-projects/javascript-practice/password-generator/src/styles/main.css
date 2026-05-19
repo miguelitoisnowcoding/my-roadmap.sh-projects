@@ -11,40 +11,80 @@
 
 /* Main */
 
-main {
+.flex-center {
     display: flex;
     flex-direction: column; 
-
     justify-content: center;
     align-items: center;
+}
 
+main {
     margin: 5em;
     padding: 3em 5em;
-
-    border: 1px solid black;
 }
 
 /* Password Containers */
 
-.password-container, .password-header, .password-footer {
-    padding: 1em;
+.password-container {
+    border: 1px solid black;
+    padding: 2em;
+    margin: 2.5em;
 }
 
 .password-header h1 {
     font-size: 42px;
 }
 
-.password-container__length, .password-container__radio {
-    padding: 0.5em;
+.password-footer, .password-header{
+    padding-top: 1em;
+    padding-bottom: 1em ;
 }
+
+/* .password-container__length {
+    padding: 0.5em;
+} */
 
 .password-container__length label {
     font-weight: bold;
 }
 
+.password-container__choices {
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 1em;
+}
+
+.password-container__choices p {
+    padding-bottom: 0.25em;
+    font-style: italic;
+}
+
+.password-container__buttons {
+    padding-top: 1em;
+}
+
+#generateBtn {
+    padding: 10px 15px;
+
+    border: none;
+    font-weight: bold;
+    
+    background-color: white;
+    border: 1px solid black;
+}
+
+#generateBtn:hover {
+    background-color: rgb(82, 143, 235);
+}
+
+#generateBtn:active {
+    background-color: rgb(76, 133, 218);;
+}
+
 #passwordValue {
     min-width: 40%;
-    max-width: 65%;
+    max-width: 70%;
     width: 65%;
 }
 

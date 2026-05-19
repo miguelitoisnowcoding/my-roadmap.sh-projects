@@ -7,35 +7,53 @@
   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-  <main>
-
-    <section class="password-header">
-      <h1>Password Generator</h1>
-    </section>
-
+  <main class="flex-center">
     <section class="password-container">
+      <div class="password-header">
+      <h1>Password Generator</h1>
+      </div>
       <div class="password-container__length">
         <label for="passwordValue">Password Length: </label>
         <input type="number" min="1" max="100" name="passwordValue" id="passwordValue">
       </div>
-      <div class="password-container__radio">
+      <div class="password-container__choices">
         <p>What do you want to include?</p>
-        <label for="includeLowerCase">Lowercase</label>
-        <input type="checkbox" name="choices" id="includeLowerCase">
-        <label for="includeUpperCase">Uppercase</label>
-        <input type="checkbox" name="choices" id="includeUpperCase">
-        <label for="includeNumbers">Numbers</label>
-        <input type="checkbox" name="choices" id="includeNumbers">
-        <label for="includeSpecialChars">Special Characters</label>
-        <input type="checkbox" name="choices" id="includeSpecialChars">
+        <div class="password-container__choices--checkbox">
+          <label for="includeLowerCase">Lowercase</label>
+          <input type="checkbox" name="choices" id="includeLowerCase">
+          <label for="includeUpperCase">Uppercase</label>
+          <input type="checkbox" name="choices" id="includeUpperCase">
+          <label for="includeNumbers">Numbers</label>
+          <input type="checkbox" name="choices" id="includeNumbers">
+          <label for="includeSpecialChars">Special Characters</label>
+          <input type="checkbox" name="choices" id="includeSpecialChars">
+        </div>
+      </div>
+
+      <div class="password-container__buttons">
+        <button id="generateBtn">Generate</button>
+      </div>
+      <div class="password-footer">
+        <p>Password: <span id="passwordResult"></span></p>
       </div>
     </section>
 
-    <section class="password-footer">
-    <div class="password-footer_buttons">
-      <button id="generateBtn">Generate</button>
-    </div>
-    <p>Password: <span id="passwordResult"></span></p>
+    <section class="checker-container">
+      <div class="checker-container__header">
+        <p>Password Evaluator</p>
+      </div>
+      <div class="checker-container__body">
+        <label for="passwordInput">Enter Your Password: </label>
+        <input type="text" name="password" id="passwordInput">
+
+        <div class="button-container">
+          <button id="checkBtn">Check</button>
+        </div>
+      </div>
+      <div class="checker-container__footer">
+        <p>Password: <span id="output"></span></p>
+        <p id="strengthStatus"></p>
+      </div>
     </section>
 
   </main>
