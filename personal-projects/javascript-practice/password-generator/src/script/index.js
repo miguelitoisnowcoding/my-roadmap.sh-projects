@@ -74,7 +74,7 @@ function checkPassword(password) {
       console.log('No!');
     }
   }
-  lengthStrength.textContent = lengthApprove ? '/' : 'X'
+  lengthStrength.innerHTML = lengthApprove ? '<img src="../assets/check-icon.png" alt="check-mark" width="10px">' : '<img src="../assets/x-icon.png" alt="check-mark" width="10px">'
 
   // for (let i = 0; i < lowerCase.length; i++) {
   //   if (password.includes(lowerCase[i])) {
@@ -87,7 +87,7 @@ function checkPassword(password) {
   // }
 
   lowerCaseApprove = /[a-z]/.test(password);
-  lowerCaseStrength.textContent = lowerCaseApprove ? '/' : 'X'
+  lowerCaseStrength.innerHTML = lowerCaseApprove ? '<img src="../assets/check-icon.png" alt="check-mark" width="10px">' : '<img src="../assets/x-icon.png" alt="check-mark" width="10px">'
 
   // for (let i = 0; i < upperCase.length; i++) {
   //   if (password.includes(upperCase[i])) {
@@ -100,7 +100,7 @@ function checkPassword(password) {
   // }
 
   upperCaseApprove = /[A-Z]/.test(password);
-  upperCaseStrength.textContent = upperCaseApprove ? '/' : 'X';
+  upperCaseStrength.innerHTML = upperCaseApprove ? '<img src="../assets/check-icon.png" alt="check-mark" width="10px">' : '<img src="../assets/x-icon.png" alt="check-mark" width="10px">';
 
   // for (let i = 0; i < numbers.length; i++) {
   //   if (password.includes(numbers[i])) {
@@ -113,7 +113,7 @@ function checkPassword(password) {
   // }
 
   numberApprove = /[0-9]/.test(password);
-  numberStrength.textContent = numberApprove ? '/' : 'X';
+  numberStrength.innerHTML = numberApprove ? '<img src="../assets/check-icon.png" alt="check-mark" width="10px">' : '<img src="../assets/x-icon.png" alt="check-mark" width="10px">';
 
   // for (let i = 0; i < specialChars.length; i++) {
   //   if (password.includes(specialChars[i])) {
@@ -126,5 +126,5 @@ function checkPassword(password) {
   // }
 
   specialCharApprove = /[!@#$%^&*()_+=-]/.test(password); 
-  specialCharStrength.textContent = specialCharApprove ? '/' : 'X';
+  specialCharStrength.innerHTML = specialCharApprove ? '<img src="../assets/check-icon.png" alt="check-mark" width="10px">' : '<img src="../assets/x-icon.png" alt="check-mark" width="10px">';
 }
