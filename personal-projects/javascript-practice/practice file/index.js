@@ -1,11 +1,9 @@
-const output = document.getElementById("output");
-const submitBtn = document.getElementById("submitBtn");
+const products = [
+  { name: 'Laptop', price: 999,  inStock: true  },
+  { name: 'Phone',  price: 699,  inStock: false },
+  { name: 'Tablet', price: 499,  inStock: true  },
+];
 
-submitBtn.onclick = function() {
-  const fullName = document.getElementById("fullName").value;
+const summaries = products.map(m => `${name} costs ${price} (${inStock ? `in stock` : `out of stock`}`);
 
-  let firstName = fullName.slice(0, fullName.indexOf(" "));
-  let lastName = fullName.slice(fullName.indexOf(" "));
-
-  output.textContent = `Your first name is ${firstName} and your last name is ${lastName}`;
-}
+console.log(summaries);

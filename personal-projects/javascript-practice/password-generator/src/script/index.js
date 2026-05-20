@@ -40,7 +40,11 @@ function generatePassword(length, includeLowerCase, includeUpperCase, includeNum
 // Check Password 
 const checkBtn = document.getElementById("checkBtn");
 const output = document.getElementById("output");
-const strengthStatus = document.getElementById("strengthStatus");
+const lengthStrength = document.getElementById("lengthStrength");
+const upperCaseStrength = document.getElementById("upperCaseStrength");
+const lowerCaseStrength = document.getElementById("lowerCaseStrength");
+const numberStrength = document.getElementById("numberStrength");
+const specialCharStrength = document.getElementById("specialCharStrength");
 
 checkBtn.onclick = function() {
   const passwordInput = document.getElementById("passwordInput").value;
@@ -56,7 +60,6 @@ function checkPassword(password) {
   const numbers = "1234567890";
   const specialChars = "!@#$%^&*()_+=-";
   const minLength = 5;
-  const maxLength = 15; 
   let lengthApprove = false;
   let lowerCaseApprove = false;
   let upperCaseApprove = false;
@@ -64,56 +67,64 @@ function checkPassword(password) {
   let specialCharApprove = false;
 
   for (let i = 0; i < password.length; i++) {
-    if (password < minLength || password > maxLength) {
-      console.log('No!');
-    } else {
+    if (password.length >= minLength) {
       lengthApprove = true;
-    }
-  }
-
-  for (let i = 0; i < lowerCase.length; i++) {
-    if (password.includes(lowerCase[i])) {
-      console.log('Yes');
-      lowerCaseApprove = true;
+      break;
     } else {
-      console.log('NO');
+      console.log('No!');
     }
   }
+  lengthStrength.textContent = lengthApprove ? '/' : 'X'
 
-  for (let i = 0; i < upperCase.length; i++) {
-    if (password.includes(upperCase[i])) {
-      console.log('Yes');
-      upperCaseApprove = true;
-    } else {
-      console.log('NO');
-    }
-  }
+  // for (let i = 0; i < lowerCase.length; i++) {
+  //   if (password.includes(lowerCase[i])) {
+  //     console.log('Yes');
+  //     lowerCaseApprove = true;
+  //     break;
+  //   } else {
+  //     console.log('NO');
+  //   }
+  // }
 
-  for (let i = 0; i < numbers.length; i++) {
-    if (password.includes(numbers[i])) {
-      console.log('Yes');
-      numberApprove = true;
-    } else {
-     console.log('NO');
-    }
-  }
+  lowerCaseApprove = /[a-z]/.test(password);
+  lowerCaseStrength.textContent = lowerCaseApprove ? '/' : 'X'
 
-  for (let i = 0; i < specialChars.length; i++) {
-    if (password.includes(specialChars[i])) {
-      console.log('Yes');
-      specialCharApprove = true;
-    } else {
-      console.log('NO');
-    }
-  }
+  // for (let i = 0; i < upperCase.length; i++) {
+  //   if (password.includes(upperCase[i])) {
+  //     console.log('Yes');
+  //     upperCaseApprove = true;
+  //     break;
+  //   } else {
+  //     console.log('NO');
+  //   }
+  // }
 
-  if (lengthApprove == false) {
-    strengthStatus.textContent = 'Please keep your password within 5 - 15 characters';
-  } else if (lowerCase == false || upperCase == false) {
-    strengthStatus.textContent = 'Please include a lowercase and a uppercase character in your password';
-  } else if (numberApprove == false || specialCharApprove == false) {
-    strengthStatus.textContent = 'Please include a number and special character in your password';
-  } else {
-    strengthStatus.textContent = 'Your Password is Strong!';
-  }
+  upperCaseApprove = /[A-Z]/.test(password);
+  upperCaseStrength.textContent = upperCaseApprove ? '/' : 'X';
+
+  // for (let i = 0; i < numbers.length; i++) {
+  //   if (password.includes(numbers[i])) {
+  //     console.log('Yes');
+  //     numberApprove = true;
+  //     break;
+  //   } else {
+  //    console.log('NO');
+  //   }
+  // }
+
+  numberApprove = /[0-9]/.test(password);
+  numberStrength.textContent = numberApprove ? '/' : 'X';
+
+  // for (let i = 0; i < specialChars.length; i++) {
+  //   if (password.includes(specialChars[i])) {
+  //     console.log('Yes');
+  //     specialCharApprove = true;
+  //     break;
+  //   } else {
+  //     console.log('NO');
+  //   }
+  // }
+
+  specialCharApprove = /[!@#$%^&*()_+=-]/.test(password); 
+  specialCharStrength.textContent = specialCharApprove ? '/' : 'X';
 }

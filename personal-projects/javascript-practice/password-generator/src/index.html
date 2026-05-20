@@ -38,7 +38,7 @@
       </div>
     </section>
 
-    <section class="checker-container">
+    <section class="checker-container flex-center">
       <div class="checker-container__header">
         <p>Password Evaluator</p>
       </div>
@@ -52,7 +52,13 @@
       </div>
       <div class="checker-container__footer">
         <p>Password: <span id="output"></span></p>
-        <p id="strengthStatus"></p>
+        <ul>
+          <li>[<span id="lengthStrength">X</span>] Minimum of 5 - 15 characters</li>
+          <li>[<span id="upperCaseStrength">X</span>] Must contain an uppercase</li>
+          <li>[<span id="lowerCaseStrength">X</span>] Must contain an lowercase</li>
+          <li>[<span id="numberStrength">X</span>] Must contain a number</li>
+          <li>[<span id="specialCharStrength">X</span>] Must contain a special character</li>
+        </ul>
       </div>
     </section>
 
